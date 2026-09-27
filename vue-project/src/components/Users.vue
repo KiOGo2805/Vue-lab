@@ -4,12 +4,10 @@ import { mockUsers, type User } from '../data/users';
 
 const users = ref<User[]>(mockUsers);
 
-// Стан для фільтрів та сортування
 const genderFilter = ref<'all' | 'male' | 'female'>('all');
 const ageFilter = ref<'all' | '18+'>('all');
 const sortBy = ref<'none' | 'nameAsc' | 'nameDesc' | 'ageAsc' | 'ageDesc'>('none');
 
-// Комп'ютед властивість для застосування фільтрів та сортування
 const filteredAndSortedUsers = computed(() => {
   let result = users.value;
 
@@ -50,7 +48,6 @@ const toggleDetails = (user: User) => {
 
 <template>
   <div class="users-container">
-    <!-- Toolbar -->
     <div class="toolbar">
       <div class="filter-group">
         <button @click="genderFilter = 'all'" :class="{ active: genderFilter === 'all' }">Всі</button>
@@ -73,12 +70,10 @@ const toggleDetails = (user: User) => {
       <button class="reset-btn" @click="resetFilters">Очистити все</button>
     </div>
 
-    <!-- Перевірка на пустий список -->
     <div v-if="filteredAndSortedUsers.length === 0" class="empty-state">
       <h2>Список юзерів пустий</h2>
     </div>
 
-    <!-- Список користувачів -->
     <div class="users-list">
       <div 
         v-for="user in filteredAndSortedUsers" 
@@ -92,11 +87,9 @@ const toggleDetails = (user: User) => {
         }"
       >
         <div class="card-left">
-          <!-- v-bind для src та динамічного alt -->
           <img :src="user.picture" :alt="`${user.name.first} ${user.name.last}`" class="avatar" />
           <h3>{{ user.name.title }} {{ user.name.first }} {{ user.name.last }}</h3>
           <p class="gender">{{ user.gender }}</p>
-          <!-- v-if для віку -->
           <p v-if="user.dob.age >= 18" class="age">{{ user.dob.age }} років</p>
         </div>
 
@@ -116,19 +109,16 @@ const toggleDetails = (user: User) => {
           <div class="info-section">
             <h4>Hobbies</h4>
             <ul class="hobbies-list">
-              <!-- v-for для хобі -->
               <li v-for="(hobby, index) in user.hobbies" :key="index" class="hobby-tag">
                 {{ hobby }}
               </li>
             </ul>
           </div>
 
-          <!-- Кнопка для v-show -->
           <button class="details-btn" @click="toggleDetails(user)">
             {{ user.showDetails ? 'Приховати деталі' : 'Показати деталі' }}
           </button>
           
-          <!-- v-show для деталей -->
           <div v-show="user.showDetails" class="details-box">
             {{ user.details }}
           </div>
@@ -189,21 +179,19 @@ button.active { background: #0d6efd; color: white; border-color: #0d6efd; }
   gap: 20px;
 }
 
-/* Оформлення картки відповідно до макету */
 .user-card {
   display: flex;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   overflow: hidden;
-  border-left: 8px solid #ccc; /* Дефолтний колір */
+  border-left: 8px solid #ccc;
 }
 
-/* Умовне фарбування (об'єктний синтаксис :class) */
-.user-card.minor { border-left-color: #ffc107; } /* Жовтий */
-.user-card.young { border-left-color: #28a745; } /* Зелений */
-.user-card.adult { border-left-color: #0d6efd; } /* Синій */
-.user-card.senior { border-left-color: #6f42c1; } /* Фіолетовий */
+.user-card.minor { border-left-color: #ffc107; }
+.user-card.young { border-left-color: #28a745; }
+.user-card.adult { border-left-color: #0d6efd; }
+.user-card.senior { border-left-color: #6f42c1; }
 
 .card-left {
   padding: 20px;
@@ -213,11 +201,13 @@ button.active { background: #0d6efd; color: white; border-color: #0d6efd; }
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 120px;   
+  height: 120px;    
+  object-fit: cover;    
+  object-position: center;
+  display: block;          
+  margin: 0 auto 15px;
   border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 15px;
 }
 
 .card-right {

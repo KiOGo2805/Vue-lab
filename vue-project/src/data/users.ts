@@ -26,7 +26,7 @@ export const mockUsers: User[] = [
     email: "emma.lampi@example.com",
     dob: { date: "2001-03-08T01:39:19.084Z", age: 25 },
     phone: "02-689-410", cell: "043-730-12-94",
-    picture: "/users/user1.jpg",
+    picture: "/users/user1.png",
     hobbies: ["Travel", "Photography", "Music"],
     details: "I love exploring new cultures and taking photos.",
     showDetails: false
@@ -39,7 +39,7 @@ export const mockUsers: User[] = [
     email: "john.doe@example.com",
     dob: { date: "2007-05-12T00:00:00.000Z", age: 16 },
     phone: "123-456-7890", cell: "098-765-4321",
-    picture: "/users/user2.jpg",
+    picture: "/users/user2.png",
     hobbies: ["Gaming", "Coding"],
     details: "High school student passionate about programming.",
     showDetails: false
@@ -52,7 +52,7 @@ export const mockUsers: User[] = [
     email: "robert.s@example.com",
     dob: { date: "1980-11-20T00:00:00.000Z", age: 43 },
     phone: "222-333-4444", cell: "555-666-7777",
-    picture: "/users/user3.jpg",
+    picture: "/users/user3.png",
     hobbies: ["Fishing", "Reading"],
     details: "Experienced software engineer.",
     showDetails: false
@@ -65,7 +65,7 @@ export const mockUsers: User[] = [
     email: "alice.j@example.com",
     dob: { date: "1965-02-15T00:00:00.000Z", age: 58 },
     phone: "111-222-3333", cell: "444-555-6666",
-    picture: "/users/user4.jpg",
+    picture: "/users/user4.png",
     hobbies: ["Gardening", "Cooking"],
     details: "Retired teacher enjoying nature.",
     showDetails: false
@@ -78,7 +78,7 @@ export const mockUsers: User[] = [
     email: "sofia.miller@example.com",
     dob: { date: "2011-04-19T00:00:00.000Z", age: 15 },
     phone: "01-234-5678", cell: "085-123-4567",
-    picture: "/users/user5.jpg",
+    picture: "/users/user5.png",
     hobbies: ["Drawing", "Swimming"],
     details: "A curious student who enjoys art and sports.",
     showDetails: false
@@ -91,7 +91,7 @@ export const mockUsers: User[] = [
     email: "liam.brown@example.com",
     dob: { date: "2008-09-03T00:00:00.000Z", age: 18 },
     phone: "03-9123-4567", cell: "0412-345-678",
-    picture: "/users/user6.jpg",
+    picture: "/users/user6.png",
     hobbies: ["Basketball", "Music"],
     details: "A college student and weekend basketball player.",
     showDetails: false
@@ -104,7 +104,7 @@ export const mockUsers: User[] = [
     email: "maya.patel@example.com",
     dob: { date: "2002-06-14T00:00:00.000Z", age: 24 },
     phone: "604-555-0107", cell: "604-555-0177",
-    picture: "/users/user7.jpg",
+    picture: "/users/user7.png",
     hobbies: ["Hiking", "Cooking"],
     details: "A young designer who loves the outdoors.",
     showDetails: false
@@ -117,7 +117,7 @@ export const mockUsers: User[] = [
     email: "mateo.garcia@example.com",
     dob: { date: "1995-12-22T00:00:00.000Z", age: 30 },
     phone: "91-555-0108", cell: "600-555-0188",
-    picture: "/users/user8.jpg",
+    picture: "/users/user8.png",
     hobbies: ["Cycling", "Reading"],
     details: "A project manager who spends free time cycling.",
     showDetails: false
@@ -130,7 +130,7 @@ export const mockUsers: User[] = [
     email: "nina.kowalski@example.com",
     dob: { date: "1983-08-10T00:00:00.000Z", age: 43 },
     phone: "12-555-0109", cell: "500-555-0199",
-    picture: "/users/user9.jpg",
+    picture: "/users/user9.png",
     hobbies: ["Gardening", "Travel"],
     details: "An architect with a passion for travel and gardening.",
     showDetails: false
@@ -143,7 +143,7 @@ export const mockUsers: User[] = [
     email: "george.wilson@example.com",
     dob: { date: "1957-01-28T00:00:00.000Z", age: 69 },
     phone: "617-555-0110", cell: "617-555-0200",
-    picture: "/users/user10.jpg",
+    picture: "/users/user10.png",
     hobbies: ["Chess", "History"],
     details: "A retired librarian who enjoys history and chess.",
     showDetails: false
