@@ -70,6 +70,82 @@ export const mockUsers: User[] = [
     details: "Retired teacher enjoying nature.",
     showDetails: false
   },
-  // Для економії місця додано 4 показових користувачів різних вікових категорій (minor, young, adult, senior). 
-  // Під час виконання роботи просто розмножте ці об'єкти до 10, змінюючи імена та вік.
+  {
+    id: 5,
+    gender: "female",
+    name: { title: "Miss", first: "Sofia", last: "Miller" },
+    location: { street: { number: 31, name: "Cedar Lane" }, city: "Dublin", state: "Leinster", country: "Ireland", postcode: 40005, timezone: { offset: "+0:00", description: "GMT" } },
+    email: "sofia.miller@example.com",
+    dob: { date: "2011-04-19T00:00:00.000Z", age: 15 },
+    phone: "01-234-5678", cell: "085-123-4567",
+    picture: "/users/user5.jpg",
+    hobbies: ["Drawing", "Swimming"],
+    details: "A curious student who enjoys art and sports.",
+    showDetails: false
+  },
+  {
+    id: 6,
+    gender: "male",
+    name: { title: "Mr", first: "Liam", last: "Brown" },
+    location: { street: { number: 74, name: "Maple Road" }, city: "Melbourne", state: "Victoria", country: "Australia", postcode: 30006, timezone: { offset: "+10:00", description: "AEST" } },
+    email: "liam.brown@example.com",
+    dob: { date: "2008-09-03T00:00:00.000Z", age: 18 },
+    phone: "03-9123-4567", cell: "0412-345-678",
+    picture: "/users/user6.jpg",
+    hobbies: ["Basketball", "Music"],
+    details: "A college student and weekend basketball player.",
+    showDetails: false
+  },
+  {
+    id: 7,
+    gender: "female",
+    name: { title: "Ms", first: "Maya", last: "Patel" },
+    location: { street: { number: 19, name: "Lakeview Drive" }, city: "Vancouver", state: "BC", country: "Canada", postcode: 50007, timezone: { offset: "-8:00", description: "PST" } },
+    email: "maya.patel@example.com",
+    dob: { date: "2002-06-14T00:00:00.000Z", age: 24 },
+    phone: "604-555-0107", cell: "604-555-0177",
+    picture: "/users/user7.jpg",
+    hobbies: ["Hiking", "Cooking"],
+    details: "A young designer who loves the outdoors.",
+    showDetails: false
+  },
+  {
+    id: 8,
+    gender: "male",
+    name: { title: "Mr", first: "Mateo", last: "Garcia" },
+    location: { street: { number: 56, name: "Calle Mayor" }, city: "Madrid", state: "Community of Madrid", country: "Spain", postcode: 28008, timezone: { offset: "+1:00", description: "CET" } },
+    email: "mateo.garcia@example.com",
+    dob: { date: "1995-12-22T00:00:00.000Z", age: 30 },
+    phone: "91-555-0108", cell: "600-555-0188",
+    picture: "/users/user8.jpg",
+    hobbies: ["Cycling", "Reading"],
+    details: "A project manager who spends free time cycling.",
+    showDetails: false
+  },
+  {
+    id: 9,
+    gender: "female",
+    name: { title: "Mrs", first: "Nina", last: "Kowalski" },
+    location: { street: { number: 103, name: "Wislana" }, city: "Krakow", state: "Lesser Poland", country: "Poland", postcode: 30009, timezone: { offset: "+1:00", description: "CET" } },
+    email: "nina.kowalski@example.com",
+    dob: { date: "1983-08-10T00:00:00.000Z", age: 43 },
+    phone: "12-555-0109", cell: "500-555-0199",
+    picture: "/users/user9.jpg",
+    hobbies: ["Gardening", "Travel"],
+    details: "An architect with a passion for travel and gardening.",
+    showDetails: false
+  },
+  {
+    id: 10,
+    gender: "male",
+    name: { title: "Mr", first: "George", last: "Wilson" },
+    location: { street: { number: 27, name: "Willow Street" }, city: "Boston", state: "MA", country: "USA", postcode: 10010, timezone: { offset: "-5:00", description: "EST" } },
+    email: "george.wilson@example.com",
+    dob: { date: "1957-01-28T00:00:00.000Z", age: 69 },
+    phone: "617-555-0110", cell: "617-555-0200",
+    picture: "/users/user10.jpg",
+    hobbies: ["Chess", "History"],
+    details: "A retired librarian who enjoys history and chess.",
+    showDetails: false
+  },
 ];
