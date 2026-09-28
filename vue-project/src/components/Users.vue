@@ -11,17 +11,14 @@ const sortBy = ref<'none' | 'nameAsc' | 'nameDesc' | 'ageAsc' | 'ageDesc'>('none
 const filteredAndSortedUsers = computed(() => {
   let result = users.value;
 
-  // Фільтрація за статтю
   if (genderFilter.value !== 'all') {
     result = result.filter(u => u.gender === genderFilter.value);
   }
 
-  // Фільтрація за віком
   if (ageFilter.value === '18+') {
     result = result.filter(u => u.dob.age >= 18);
   }
 
-  // Сортування
   if (sortBy.value !== 'none') {
     result = [...result].sort((a, b) => {
       if (sortBy.value === 'nameAsc') return a.name.first.localeCompare(b.name.first);
